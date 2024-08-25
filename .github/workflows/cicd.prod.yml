@@ -58,4 +58,4 @@ jobs:
             --application-name sikyozoDeploy \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
             --deployment-group-name sikyozoDeploy \
-            --github-location repository=${{ github.repository }},commitId=${{ github.sha }} \
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
