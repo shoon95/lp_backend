@@ -6,7 +6,6 @@ files:
   - source: /scripts
     destination: /home/ubuntu/deployment/scripts
 hooks:
-
   AfterInstall:
     - location: scripts/after_install.sh
       runas: ubuntu
