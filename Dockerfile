@@ -8,7 +8,7 @@ COPY . .
 COPY .env.prod .
 
 # 3. Gradle 빌드를 수행
-RUN ./gradlew build --no-daemon
+RUN ./gradlew build
 
 ENV SPRING_PROFILES_ACTIVE=prod
 
