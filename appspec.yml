@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/deployment
+
+hooks:
+
+  AfterInstall:
+    - location: scripts/after_install.sh
+      runas: ubuntu
+
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      runas: ubuntu
+
+  ValidateService:
+    - location: scripts/validate_service.sh
+      runas: ubuntu
