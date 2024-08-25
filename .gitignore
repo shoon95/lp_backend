@@ -12,8 +12,10 @@
 *.db-wal
 
 ### dotenv ###
+.env.dev
+.env.prod
 .env
-
+.env.**
 ### Images ###
 # JPEG
 *.jpg
