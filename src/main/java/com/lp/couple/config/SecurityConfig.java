@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.disable())
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/sign-in", "/sign-up").permitAll()
+                        .requestMatchers("/user", "/user/sign-in", "/user/sign-up").permitAll()
                         .anyRequest().authenticated());
 
     return http.build();
