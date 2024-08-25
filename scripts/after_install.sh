@@ -5,7 +5,7 @@ docker stop lp_backend || true
 docker rm lp_backend || true
 
 
-chmod +x /home/ubuntu/deployment/scripts/*.sh
+sudo chmod +x /home/ubuntu/deployment/scripts/*.sh
 
 # 최신 Docker 이미지 풀링
 docker pull shoon95/lp_backend:latest
