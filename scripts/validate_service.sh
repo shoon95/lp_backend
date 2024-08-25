@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 서비스가 정상적으로 실행 중인지 확인
-SERVICE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/user)
+SERVICE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:80/user)
 
 if [ "$SERVICE_STATUS" -eq 200 ]; then
   echo "Service is running successfully."
