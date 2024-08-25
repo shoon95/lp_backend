@@ -6,6 +6,7 @@ WORKDIR /app
 # 2. 소스 코드를 컨테이너에 복사
 COPY . .
 COPY .env.prod .
+RUN cat .env.prod
 
 # 3. Gradle 빌드를 수행
 RUN ./gradlew build
