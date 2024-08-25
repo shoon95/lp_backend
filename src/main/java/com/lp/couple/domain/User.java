@@ -2,7 +2,6 @@ package com.lp.couple.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -14,8 +13,12 @@ public class User {
 
     @jakarta.persistence.Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long Id;
+    private Long id;
 
+
+    /**
+     * 유저의 로그인 아이디
+     */
     @Column(nullable = false)
     private String username;
 
