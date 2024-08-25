@@ -14,8 +14,6 @@ public class CoupleApplication {
         // 값이 없으면 기본값으로 'dev' 프로파일을 사용합니다.
         if (activeProfile == null || activeProfile.isEmpty()) {
             activeProfile = "dev";
-            System.setProperty("SPRING_PROFILES_ACTIVE", activeProfile);
-
         }
 
         // 해당 프로파일에 맞는 .env 파일 로드
@@ -28,7 +26,6 @@ public class CoupleApplication {
 
         // .env 파일에서 읽은 환경 변수를 시스템 속성으로 설정
         dotenv.entries().forEach(entry -> {
-            System.out.println("entry = " + entry);
             if (System.getenv(entry.getKey()) == null) {
                 System.setProperty(entry.getKey(), entry.getValue());
             }
