@@ -6,7 +6,7 @@ MAX_WAIT_TIME=60
 SLEEP_INTERVAL=5
 
 # 서버가 응답할 포트 설정
-PORT=8080
+PORT=80
 
 # 경과 시간 초기화
 elapsed_time=0
